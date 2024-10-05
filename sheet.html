@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Sheet Operations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="operations">
+            <h1>Operations Panel</h1>
+            <div class="input-box">
+                <label for="column-count">How many columns are you working with?</label>
+                <input type="number" id="column-count" min="1" placeholder="Enter number of columns">
+                <button id="submit-column-count">Submit</button>
+            </div>
+            <div id="column-selection" class="column-selection" style="display: none;">
+                <h2>Select Columns</h2>
+                <div id="available-columns"></div>
+                <button id="process-columns">Process Selected Columns</button>
+            </div>
+            <div id="null-check-panel" style="display: none;">
+                <h2>Check for Null or Not Null</h2>
+                <div id="null-options"></div>
+                <button id="check-null">Check Nulls</button>
+            </div>
+            <div id="results"></div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+        <script src="sheet.js"></script>
+    </div>
+</body>
+</html>
